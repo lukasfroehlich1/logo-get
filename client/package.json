@@ -1,0 +1,33 @@
+{
+  "name": "lookup-client",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:3001/",
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "enzyme": "2.4.1",
+    "eslint-plugin-react": "^6.9.0",
+    "react-addons-test-utils": "15.4.0",
+    "react-scripts": "0.8.5"
+  },
+  "dependencies": {
+    "cross-spawn": "^5.0.1",
+    "google-images": "^2.0.0",
+    "material-ui": "^0.16.7",
+    "react": "^15.3.2",
+    "react-addons-css-transition-group": "^15.3.2",
+    "react-addons-transition-group": "^15.3.2",
+    "react-d3-library": "^1.1.7",
+    "react-dom": "^15.3.2",
+    "react-faux-dom": "^3.0.0",
+    "react-slider": "^0.7.0",
+    "react-tap-event-plugin": "^2.0.1",
+    "react-widgets": "^3.4.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
