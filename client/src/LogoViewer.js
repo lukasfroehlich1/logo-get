@@ -25,7 +25,7 @@ export default class LogoViewer extends Component {
   render () {
     return (
       <div style={styles.root}>
-        <GridList style={styles.gridList} cols={2.2}>
+        <GridList style={styles.gridList} cols={2.2} cellHeight={100}>
           {this.props.imgs.map((tile, idx) => {
             let actionIcon = null;
 
