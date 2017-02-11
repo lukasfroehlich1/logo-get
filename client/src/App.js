@@ -4,18 +4,11 @@ import LogoFinder from './LogoFinder';
 
 
 export default class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-    }
-  }
-
   render() {
     let containerStyle = {
       "marginLeft": 'auto',
       "marginRight": 'auto',
-      "maxWidth": '900px',
+      "maxWidth": '1200px',
       "paddingLeft": '20px',
       "paddingRight": '20px',
       "paddingTop": '30px',
