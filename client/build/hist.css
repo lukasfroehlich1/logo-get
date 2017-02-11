@@ -1,0 +1,9 @@
+.bar rect {
+  fill: steelblue;
+  opacity: 0.8;
+}
+
+.bar text {
+  fill: #fff;
+  font: 10px sans-serif;
+}
