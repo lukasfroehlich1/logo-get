@@ -4,11 +4,13 @@ import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import { Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle } from 'material-ui/Toolbar';
 import IconButton from 'material-ui/IconButton';
+import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 import ImagesClient from 'google-images';
 import JSZip from 'jszip';
 import JSZipUtils from 'jszip-utils';
 import FileSaver from 'file-saver';
+import InputManyField from './InputManyField';
 
 
 const cse_id = '002397762875892531818:o0-s0h36feo';
@@ -119,6 +121,28 @@ export default class LogoFinder extends Component {
       });
   }
 
+  loadText = (text) => {
+    let newQueries = [];
+
+    console.log(text.split('\n'));
+
+    const splitText = text.split('\n');
+
+    let i;
+    for (i = 0; i < splitText.length; i++) {
+      newQueries.push({
+        name: splitText[i],
+        results: [],
+        selected: 0,
+        lastQuery: ''
+      });
+    }
+
+    const prevQueries = this.state.queries.slice();
+
+    this.setState({queries: newQueries.concat(prevQueries)});
+  }
+
   render () {
     const queries = this.state.queries.map((query, idx) => {
       return <LogoQuery data={query} key={idx} id={idx}
@@ -141,6 +165,7 @@ export default class LogoFinder extends Component {
             <RaisedButton label="Download All" onTouchTap={this.downloadAll} />
           </ToolbarGroup>
         </Toolbar>
+        <InputManyField loadText={this.loadText} />
         <div>
           {queries}
         </div>
