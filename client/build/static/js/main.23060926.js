@@ -60438,8 +60438,6 @@
 	    _this.loadText = function (text) {
 	      var newQueries = [];
 	
-	      console.log(text.split('\n'));
-	
 	      var splitText = text.split('\n');
 	
 	      var i = void 0;
@@ -60512,9 +60510,7 @@
 	              { onTouchTap: this.addQuery },
 	              _react2.default.createElement(_add2.default, null)
 	            ),
-	            _react2.default.createElement(_RaisedButton2.default, { label: 'Lookup All', onTouchTap: this.lookupAll }),
-	            '// ',
-	            _react2.default.createElement(_RaisedButton2.default, { label: 'Download All', onTouchTap: this.downloadAll })
+	            _react2.default.createElement(_RaisedButton2.default, { label: 'Lookup All', onTouchTap: this.lookupAll })
 	          )
 	        ),
 	        _react2.default.createElement(_InputManyField2.default, { loadText: this.loadText }),
@@ -60525,6 +60521,9 @@
 	        )
 	      );
 	    }
+	
+	    // <RaisedButton label="Download All" onTouchTap={this.downloadAll} />
+	
 	  }]);
 	
 	  return LogoFinder;
@@ -66250,4 +66249,4 @@
 
 /***/ }
 /******/ ])));
-//# sourceMappingURL=main.754df971.js.map
+//# sourceMappingURL=main.23060926.js.map

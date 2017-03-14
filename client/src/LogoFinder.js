@@ -140,8 +140,6 @@ export default class LogoFinder extends Component {
   loadText = (text) => {
     let newQueries = [];
 
-    console.log(text.split('\n'));
-
     const splitText = text.split('\n');
 
     let i;
@@ -178,7 +176,6 @@ export default class LogoFinder extends Component {
               <ContentAdd />
             </IconButton>
             <RaisedButton label="Lookup All" onTouchTap={this.lookupAll} />
-            // <RaisedButton label="Download All" onTouchTap={this.downloadAll} />
           </ToolbarGroup>
         </Toolbar>
         <InputManyField loadText={this.loadText} />
@@ -188,4 +185,6 @@ export default class LogoFinder extends Component {
       </div>
     );
   }
+
+            // <RaisedButton label="Download All" onTouchTap={this.downloadAll} />
 }
